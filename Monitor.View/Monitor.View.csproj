@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{87B89952-1CE8-460F-A832-41463F16D918}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Monitor.View</RootNamespace>
+    <AssemblyName>Monitor.View</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="FormProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProduct.Designer.cs">
+      <DependentUpon>FormProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCalibrate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCalibrate.Designer.cs">
+      <DependentUpon>FormCalibrate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegisterRw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegisterRw.Designer.cs">
+      <DependentUpon>FormRegisterRw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSetting.Designer.cs">
+      <DependentUpon>FormSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UcCalibrate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcCalibrate.Designer.cs">
+      <DependentUpon>UcCalibrate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcGrid.Designer.cs">
+      <DependentUpon>UcGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boxs\UcReadWriteBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Boxs\UcReadWriteBox.Designer.cs">
+      <DependentUpon>UcReadWriteBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boxs\UcTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Boxs\UcTextBox.Designer.cs">
+      <DependentUpon>UcTextBox.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Monitor.Common\Monitor.Common.csproj">
+      <Project>{25e059ac-25ad-4a92-94d6-9f4d60b15e7b}</Project>
+      <Name>Monitor.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Monitor.Protocol4851.0\Monitor.Protocol4851.0.csproj">
+      <Project>{BF8D2DC7-2094-4530-94EB-43FC4599E3CF}</Project>
+      <Name>Monitor.Protocol4851.0</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Boxs\UcReadWriteBox.resx">
+      <DependentUpon>UcReadWriteBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProduct.resx">
+      <DependentUpon>FormProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCalibrate.resx">
+      <DependentUpon>FormCalibrate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegisterRw.resx">
+      <DependentUpon>FormRegisterRw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSetting.resx">
+      <DependentUpon>FormSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcCalibrate.resx">
+      <DependentUpon>UcCalibrate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcGrid.resx">
+      <DependentUpon>UcGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boxs\UcTextBox.resx">
+      <DependentUpon>UcTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
